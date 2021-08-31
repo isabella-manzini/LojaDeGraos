@@ -136,12 +136,12 @@ public class AdmProdutos {
                     	System.out.println("\nOpção Inválida!\n");
                 	}
            		}
-            else {
-				System.out.println("\nOpção Inválida!\n");
+            	else {
+					System.out.println("\nOpção Inválida!\n");
+				}
 			}
 		}
 	}
-}
 
 	private String menu() {
 		System.out.println("Selecione a opção:");
@@ -305,8 +305,8 @@ public class AdmProdutos {
                 else if(tipo_input.equals("nome")){
                     code = temperos.get(i).getNome();
                     if (code.equals(input)){
-                        if(tipo_output.equals("nome")){
-                            System.out.println("Nome do produto com o nome " + code + ":" + temperos.get(i).getNome());
+                        if(tipo_output.equals("codigo")){
+                            System.out.println("Nome do produto com o nome " + code + ":" + temperos.get(i).getCodigo());
                         }
                         else if(tipo_output.equals("tipo")){
                             System.out.println("Tipo do produto com o nome " + code + ":" + temperos.get(i).getTipo());
@@ -359,20 +359,20 @@ public class AdmProdutos {
                 else if(tipo_input.equals("nome")){
                     code = graos.get(i).getNome();
                     if (code.equals(input)){
-                        if(tipo_output.equals("nome")){
-                            System.out.println("Nome do produto com o codigo " + code + ":" + graos.get(i).getNome());
+                        if(tipo_output.equals("codigo")){
+                            System.out.println("Nome do produto com o nome " + code + ":" + graos.get(i).getCodigo());
                         }
                         else if(tipo_output.equals("tipo")){
-                            System.out.println("Tipo do produto com o codigo " + code + ":" + graos.get(i).getTipo());
+                            System.out.println("Tipo do produto com o nome " + code + ":" + graos.get(i).getTipo());
                         }
                         else if(tipo_output.equals("estoque")){
-                            System.out.println("Estoque disponivel do produto com o codigo " + code + ":" + graos.get(i).getQuantidade());
+                            System.out.println("Estoque disponivel do produto com o nome " + code + ":" + graos.get(i).getQuantidade());
                         }
                         else if(tipo_output.equals("validade")){
-                            System.out.println("Validade do produto com o codigo " + code + ":"  + graos.get(i).getValidade());
+                            System.out.println("Validade do produto com o nome " + code + ":"  + graos.get(i).getValidade());
                         }
                          else if(tipo_output.equals("preco")){
-                            System.out.println("Preco por quilo do produto com o codigo " + code + ":"  + graos.get(i).getPrecoKg());
+                            System.out.println("Preco por quilo do produto com o nome " + code + ":"  + graos.get(i).getPrecoKg());
                          }
                     }
                 }
