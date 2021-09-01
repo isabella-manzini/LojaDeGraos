@@ -53,7 +53,7 @@ public class AdmProdutos {
 					String opcao_busca_output = menu_busca_output_graos();
 					String input;
 					if(opcao_busca_input.equalsIgnoreCase("c")){
-						input = textInput("Codigo que deseja procurar:");
+						input = textInput("Insira o código que deseja procurar:");
 						if(opcao_busca_output.equalsIgnoreCase("n")){
 							buscaEspecificaGrao("codigo", "nome", input);
 						}
@@ -71,8 +71,8 @@ public class AdmProdutos {
 						}
 					}
 					else if(opcao_busca_input.equalsIgnoreCase("n")){
-						input = textInput("Nome que deseja procurar:");
-						if(opcao_busca_output.equalsIgnoreCase("n")){
+						input = textInput("Insira o nome que deseja procurar:");
+						if(opcao_busca_output.equalsIgnoreCase("c")){
 							buscaEspecificaGrao("nome", "codigo", input);
 						}
 						else if(opcao_busca_output.equalsIgnoreCase("t")){
@@ -97,7 +97,7 @@ public class AdmProdutos {
 					String opcao_busca_output = menu_busca_output_tempero();
 					String input;
 					if(opcao_busca_input.equalsIgnoreCase("c")){
-						input = textInput("Codigo que deseja procurar:");
+						input = textInput("Insira o código que deseja procurar:");
 						if(opcao_busca_output.equalsIgnoreCase("n")){
 							buscaEspecificaTempero("codigo", "nome", input);
 						}
@@ -115,8 +115,8 @@ public class AdmProdutos {
 						}
 					}
 					else if(opcao_busca_input.equalsIgnoreCase("n")){
-						input = textInput("Nome que deseja procurar:");
-						if(opcao_busca_output.equalsIgnoreCase("n")){
+						input = textInput("Insira o nome que deseja procurar:");
+						if(opcao_busca_output.equalsIgnoreCase("c")){
 							buscaEspecificaTempero("nome", "codigo", input);
 						}
 						else if(opcao_busca_output.equalsIgnoreCase("t")){
@@ -203,6 +203,7 @@ public class AdmProdutos {
         System.out.println("E - Estoque disponível (em gramas)");
         return l.nextLine();
     }
+
 	private void cadastrar_tempero() { //mudei aqui
 		boolean cadastrando = true;
 
@@ -237,7 +238,6 @@ public class AdmProdutos {
 			}
 		}
 	}
-
 
 	private void cadastrar_grao() {
 		boolean cadastrando = true;
@@ -306,7 +306,7 @@ public class AdmProdutos {
                     code = temperos.get(i).getNome();
                     if (code.equals(input)){
                         if(tipo_output.equals("codigo")){
-                            System.out.println("Nome do produto com o nome " + code + ":" + temperos.get(i).getCodigo());
+                            System.out.println("Codigo do produto com o nome " + code + ":" + temperos.get(i).getCodigo());
                         }
                         else if(tipo_output.equals("tipo")){
                             System.out.println("Tipo do produto com o nome " + code + ":" + temperos.get(i).getTipo());
@@ -360,7 +360,7 @@ public class AdmProdutos {
                     code = graos.get(i).getNome();
                     if (code.equals(input)){
                         if(tipo_output.equals("codigo")){
-                            System.out.println("Nome do produto com o nome " + code + ":" + graos.get(i).getCodigo());
+                            System.out.println("Codigo do produto com o nome " + code + ":" + graos.get(i).getCodigo());
                         }
                         else if(tipo_output.equals("tipo")){
                             System.out.println("Tipo do produto com o nome " + code + ":" + graos.get(i).getTipo());
@@ -379,8 +379,6 @@ public class AdmProdutos {
             }
         }
     }
-
-
 
 	private void listarCadastrosGraos() {
 		if (graos.size() == 0) {
@@ -474,7 +472,6 @@ class Graos extends Produtos{
 
 
 }
-
 
 class Produtos {
 	// atributos
