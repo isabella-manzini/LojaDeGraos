@@ -44,7 +44,7 @@ public class AdmProdutosInterface {
 						areaTexto.append("\n---LISTAGEM DOS GRÃOS---\n");	
 						for (int i = 0; i < graos.size(); i++) {
 							Graos g = graos.get(i);
-							areaTexto.append("- Nome: " + g.getNome() +"\n");
+							areaTexto.append("\n- Nome: " + g.getNome() +"\n");
 							areaTexto.append("- Tipo: " + g.getTipo() +"\n");	
 							areaTexto.append("- Validade: " + g.getValidade() +"\n");	
 							areaTexto.append("- Quantidade (kg): " + g.getQuantidade() +"\n");
@@ -61,7 +61,7 @@ public class AdmProdutosInterface {
 						areaTexto.append("\n---LISTAGEM DOS TEMPEROS---\n");
 						for (int i = 0; i < temperos.size(); i++) {
 							Temperos t = temperos.get(i);
-							areaTexto.append("- Nome: " + t.getNome() +"\n");
+							areaTexto.append("\n- Nome: " + t.getNome() +"\n");
 							areaTexto.append("- Tipo: " + t.getTipo() +"\n");	
 							areaTexto.append("- Validade: " + t.getValidade() +"\n");	
 							areaTexto.append("- Numero de potes: " + t.getNumeroDePotes() +"\n");
@@ -84,7 +84,7 @@ public class AdmProdutosInterface {
 					areaTexto.append("\nPROMOÇÃO DE GRÃOS\n");
 					for (int i = 0; i < graos.size(); i++) {
 						data = graos.get(i).getValidade();
-						if(data.equals("24-09-21")){
+						if(data.equals("25-09-21")){
 							areaTexto.append("Nome: " + graos.get(i).getNome()+"\n");
 						}	
 					}
@@ -94,7 +94,7 @@ public class AdmProdutosInterface {
 					areaTexto.append("\nPROMOÇÃO DE TEMPEROS\n");
 					for (int i = 0; i < temperos.size(); i++) {
 						data = temperos.get(i).getValidade();
-						if(data.equals("24-09-21")){
+						if(data.equals("25-09-21")){
 							areaTexto.append("Nome: " + temperos.get(i).getNome()+"\n");
 						}	
 					}
@@ -502,7 +502,7 @@ public class AdmProdutosInterface {
                             }
                         }
                     }
-				showMessageDialog(null, "Excluiu o grão com " + type_excluir + " " + text_excluir + " : com sucesso");             
+				showMessageDialog(null, "Excluiu o grão com " + type_excluir + " " + text_excluir + " com sucesso");             
                 }
 
                 else if ( campo2.getState() ){
@@ -521,7 +521,7 @@ public class AdmProdutosInterface {
                             }
                         }
                     } 
-				showMessageDialog(null, "Excluiu o tempero com " + type_excluir + " " + text_excluir + " :  com sucesso");
+				showMessageDialog(null, "Excluiu o tempero com " + type_excluir + " " + text_excluir + "  com sucesso");
                 }
             
             }
